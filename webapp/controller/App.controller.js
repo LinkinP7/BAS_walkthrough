@@ -61,8 +61,8 @@ sap.ui.define([
          // set data model on view
          var oData = {
             recipient : {
-               name : "World",
-               name2 : "!"
+               name : "Daniel",
+               name2 : "Hi, I'm noty :)"
             }
          };
          var oModel = new JSONModel(oData);
@@ -76,7 +76,7 @@ sap.ui.define([
       onShowHello : function () {
          // read msg from i18n model
          var oBundle = this.getView().getModel("i18n").getResourceBundle();
-         var sRecipient = this.getView().getModel().getProperty(oData);
+         var sRecipient = this.getView().getModel().getProperty("/recipient/name");
          var sMsg = oBundle.getText("helloMsg", [sRecipient]);
          // show message
          MessageToast.show(sMsg);

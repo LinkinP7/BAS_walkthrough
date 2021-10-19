@@ -1,3 +1,84 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Shell>
+		<App class="myAppDemoWT">
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<content>
+						<Panel
+							headerText="{i18n>helloPanelTitle}"
+                            class="sapUiResponsiveMargin"
+							width="auto">
+							<content>
+								<Button
+									text="{i18n>showHelloButtonText}"
+									press=".onShowHello"
+                                    class="myCustomButton"/>
+								<Input
+									value="{/recipient/name}"
+									valueLiveUpdate="true"
+									width="60%"/>
+                                <FormattedText
+									htmlText="Hello {/recipient/name}"
+									class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+                                <Input
+                                    value="{/recipient/name2}"
+                                    valueLiveUpdate="true"
+                                    width="60%"/>      
+							</content>
+						</Panel>
+                        <Panel 
+                            headerText="Write Anything you want!"
+                            class="sapUiResponsiveMargin"
+							width="auto">
+                            <Text
+									text="{/recipient/name2}"
+									class="sapUiSmallMargin"/> 
+                        </Panel>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
+
+<!-- walk 11 -->
+<!-- <mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true">
+   <App>
+      <pages>
+         <Page title="{i18n>homePageTitle}">
+            <content>
+               <Panel
+                  headerText="{i18n>helloPanelTitle}">
+                  <content>
+
+                     <Button
+                        text="{i18n>showHelloButtonText}"
+                        press=".onShowHello"/>
+                     <Input
+                        value="{/recipient/name}"
+                        valueLiveUpdate="true"
+                        width="30%"/>
+                       <Input
+                        value="{/recipient/name2}"
+                        description="Hello {/recipient/name} {/recipient/name2}"
+                        valueLiveUpdate="true"
+                        width="30%"/>    
+                  </content>
+               </Panel>
+            </content>
+         </Page>
+      </pages>
+   </App>
+</mvc:View> -->
+
 <!-- <mvc:View
    controllerName="sap.ui.demo.walkthrough.controller.App"
    xmlns="sap.m"
@@ -42,7 +123,8 @@
 
 </mvc:View> -->
 
-<mvc:View
+<!--  walk 9~10 -->
+<!-- <mvc:View
    controllerName="sap.ui.demo.walkthrough.controller.App"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
@@ -54,4 +136,4 @@
       description="Hello {/recipient/name}"
       valueLiveUpdate="true"
       width="60%"/>
-</mvc:View>
+</mvc:View> -->
