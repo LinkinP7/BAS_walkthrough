@@ -28,14 +28,13 @@
       "phone": true
     }
   },
-
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "testDigimon.project1.view.testView1",
+      "viewName": "testDigimon.project1.view.App",
       "type": "XML",
       "async": true,
-      "id": "testView1"
+      "id": "main"
     },
     "dependencies": {
 			"minUI5Version": "1.95.0",
@@ -51,12 +50,18 @@
       "cozy": true
     },
     "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "testDigimon.project1.i18n.i18n"
+        "i18n": {
+            "type": "sap.ui.model.resource.ResourceModel",
+            "settings": {
+            "bundleName": "testDigimon.project1.i18n.i18n",
+            "supportedLocales": [""],
+            "fallbackLocale": ""
+            }
+        },
+        "invoice" : {
+            "type": "sap.ui.model.json.JSONModel",
+            "uri": "Invoices.json"
         }
-      }
     },
     "resources": {
       "css": [
@@ -77,18 +82,18 @@
       },
       "routes": [
         {
-          "name": "RoutetestView1",
-          "pattern": "RoutetestView1",
-          "target": ["TargettestView1"]
+          "name": "Routemain",
+          "pattern": "Routemain",
+          "target": ["Targetmain"]
         }
       ],
       "targets": {
-        "TargettestView1": {
+        "Targetmain": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "testView1",
-          "viewName": "testView1"
+          "viewId": "main",
+          "viewName": "main"
         }
       }
     }
