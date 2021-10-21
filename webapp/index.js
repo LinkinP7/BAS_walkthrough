@@ -17,9 +17,9 @@ sap.ui.define([
 	"use strict";
 
 	new ComponentContainer({
-		name: "sap.ui.demo.walkthrough",
+		name: "testDigimon.project1",
 		settings : {
-			id : "walkthrough"
+			id : "container"
 		},
 		async: true
 	}).placeAt("content");
