@@ -19,7 +19,11 @@ sap.ui.define([
         if (!this.pDialog) {
             this.pDialog = this.loadFragment({
                 name: "testDigimon.project1.view.HelloDialog"
-            });
+            }).then(function (oDialog){
+					// forward compact/cozy style into dialog
+					syncStyleClass(this.getOwnerComponent().getContentDensityClass(), this.getView(), oDialog);
+					return oDialog;
+				}.bind(this));
         } 
         this.pDialog.then(function(oDialog) {
             oDialog.open();
